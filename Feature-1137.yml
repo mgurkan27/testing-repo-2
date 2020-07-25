@@ -1,0 +1,21 @@
+Parameters:
+  InstanceType :
+    Type : String
+    Default: t2.micro
+  KeyName :
+    Type : String
+    Default: my-key
+  # EC2AMI:
+  #   Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+  #   Default: '/ziyotek/amit/east'
+  EC2AMI:
+    Type: String
+    Default: ami-09d95fab7fff3776c
+    
+Resources :
+  Instance :
+    Type : 'AWS::EC2::Instance'
+    Properties:
+      Type : !Ref InstanceType
+      KeyName : !Ref KeyName
+      ImageId : !Ref EC2AMI 
