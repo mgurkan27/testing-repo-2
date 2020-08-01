@@ -19,3 +19,9 @@ Resources :
       Type : !Ref InstanceType
       KeyName : !Ref KeyName
       ImageId : !Ref EC2AMI 
+  Instance2 :
+    Type : 'AWS::EC2::Instance'
+    Properties:
+      Type : !Ref InstanceType
+      KeyName : !Ref KeyName
+      ImageId : !Ref EC2AMI
