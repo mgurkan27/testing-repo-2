@@ -7,12 +7,11 @@ variable "image_id" {
 variable "instance_type" {
     type = string
     description = "This is my instanc type"
-    default = "t2.micro"
 }
 
 
-variable "password" {
+variable "key_name" {
     type = string
-    description = "This is my instanc type"
+    description = "Name of ssh key"
 }
 

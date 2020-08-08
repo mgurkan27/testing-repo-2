@@ -15,7 +15,7 @@ resource "aws_instance" "example" {
   tags = {
     Name = "terraform-example"
   }
-  key_name = "my-key"
+  key_name = var.key_name
 }
 
 resource "aws_security_group" "instance" {
@@ -36,7 +36,7 @@ resource "aws_security_group" "instance" {
 }
 
 resource "aws_security_group" "ssh" {
-  name = var.password
+  name = "terraform-ssh-instance"
   ingress {
     from_port   = 22
     to_port     = 22
