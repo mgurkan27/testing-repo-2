@@ -15,7 +15,13 @@ resource "aws_instance" "example" {
   tags = {
     Name = "terraform-example"
   }
-  key_name = var.key_name
+  key_name             = var.key_name
+  iam_instance_profile = aws_iam_instance_profile.test_profile.id
+}
+
+resource "aws_iam_instance_profile" "test_profile" {
+  name = "test_profile"
+  role = aws_iam_role.test_role.name
 }
 
 resource "aws_security_group" "instance" {

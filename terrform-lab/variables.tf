@@ -5,13 +5,13 @@ variable "image_id" {
 }
 
 variable "instance_type" {
-    type = string
-    description = "This is my instanc type"
+  type        = string
+  description = "This is my instanc type"
 }
 
 
 variable "key_name" {
-    type = string
-    description = "Name of ssh key"
+  type        = string
+  description = "Name of ssh key"
 }
 
