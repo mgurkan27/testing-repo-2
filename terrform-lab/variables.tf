@@ -10,3 +10,9 @@ variable "instance_type" {
     default = "t2.micro"
 }
 
+
+variable "password" {
+    type = string
+    description = "This is my instanc type"
+}
+

@@ -36,7 +36,7 @@ resource "aws_security_group" "instance" {
 }
 
 resource "aws_security_group" "ssh" {
-  name = "terraform-ssh-instance"
+  name = var.password
   ingress {
     from_port   = 22
     to_port     = 22
