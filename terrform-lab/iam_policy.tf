@@ -13,8 +13,8 @@ resource "aws_iam_policy" "policy" {
       ],
       "Effect": "Allow",
       "Resource": [
-          "${aws_s3_bucket.example.arn}",
-          "${aws_s3_bucket.example.arn}/*"
+          "${module.s3_bucket_for_utility.bucket_arn}",
+          "${module.s3_bucket_for_utility.bucket_arn}/*"
       ]
     }
   ]

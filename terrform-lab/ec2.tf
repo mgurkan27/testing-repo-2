@@ -1,3 +1,7 @@
+module "s3_bucket_for_utility" {
+  source = "./module/s3"
+  bucket_name = "amitsehgal-testing-bucket-artifact"
+}
 
 resource "aws_instance" "example" {
   ami                    = var.image_id

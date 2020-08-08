@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "example" {
-  bucket = "my-tf-test-bucket-amit"
+  bucket = var.bucket_name
   acl    = "private"
   tags = {
     Name        = "My bucket"
