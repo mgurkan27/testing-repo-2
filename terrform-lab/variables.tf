@@ -15,3 +15,11 @@ variable "key_name" {
   description = "Name of ssh key"
 }
 
+variable "ec2_tags" {
+  type = map
+}
+
+variable "env_type" {
+  type = string
+}
+
