@@ -3,6 +3,16 @@ module "s3_bucket_for_utility" {
   bucket_name = "amitsehgal-testing-bucket-artifact"
 }
 
+module "s3_bucket_for_utility-1" {
+  source = "./module/s3"
+  bucket_name = "amitsehgal-testing-bucket-artifact-1"
+}
+
+module "s3_bucket_for_utility-2" {
+  source = "./module/s3"
+  bucket_name = "amitsehgal-testing-bucket-artifact-2"
+}
+
 resource "aws_instance" "example" {
   ami                    = var.image_id
   instance_type          = var.instance_type
